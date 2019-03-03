@@ -1,0 +1,4 @@
+#ifndef CMAKE_PARAMS_HPP
+#define CMAKE_PARAMS_HPP
+#cmakedefine RESOURCES_FOLDER	"@RESOURCES_FOLDER@"
+#endif
