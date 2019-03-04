@@ -4,7 +4,6 @@
 
 #ifndef VIEWPORT_HPP
 #define VIEWPORT_HPP
-#include <mutex>
 #include <list>
 
 #ifndef FENIX_ENGINE_H
@@ -22,19 +21,48 @@
  */
 class Viewport {
 private:
+	/** Checks whether a Node is visible inside the viewport.
+	 * \param node The node to check if it is printable.
+	 *
+	 * \return If the node is inside the viewport's limits.
+	 */
 	bool isNodePrintable(BasicNode *);
+
+	/** Sets the limits of the viewport.
+	 * \param limits The limits of the viewport.
+	 */
 	void setViewport(const SDL_Rect);
+
+	/** Sets the renderer to process the viewport.
+	 * \param renderer The renderer used to print the viewport.
+	 */
 	void setRenderer(SDL_Renderer *);
 protected:
-	SDL_Rect viewport;
-	SDL_Renderer * renderer;
+	SDL_Rect viewport; // <* The viewport's limits
+	SDL_Renderer * renderer; // <* The renderer to draw the viewport on screen.
 
-	std::mutex mtx;
 public:
-	Viewport(const SDL_Rect, SDL_Renderer *);
-	Viewport(const Point&, const Size&, SDL_Renderer *);
-	Viewport(const Viewport&);
+	/** Initializes the viewport using its limits and the renderer.
+	 * \param limits The limits of the viewport.
+	 * \param renderer The renderer to draw the viewport.
+	 */
+	Viewport(const SDL_Rect limits, SDL_Renderer *renderer);
+	
+	/** Initializes the viewport using its limits and the renderer.
+	 * \param upperLeft The upper left starting point of the viewport.
+	 * \param size The width and height of the viewport.
+	 * \param renderer The renderer to draw the viewport.
+	 */
+	Viewport(const Point& upperLeft, const Size& size, SDL_Renderer *renderer);
 
+	/** Copies a viewport.
+	 * \param viewport The viewport to copy.
+	 */
+	Viewport(const Viewport& viewport);
+
+	/** Starts rendering nodes that are visible.
+	 * \param nodeList The list of nodes that belongs to the scene.
+	 */
 	void renderNodes(std::list<BasicNode *> *);
 };
 #endif

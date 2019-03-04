@@ -81,10 +81,23 @@ public:
 	virtual void act() = 0;
 };
 
+/** A game object that does not act.
+ */
 class Node: public BasicNode {
 public:
+	/** Creates an object of size 0 x 0 in the position (0, 0)
+	 */
 	Node();
+
+	/**Creates an object of the size `size` in the position `position`.
+	 * \param position The position of the new object.
+	 * \param size The size of the object to create.
+	 */
 	Node(const Point& position, const Size& size);
+
+	/** Action of the Node.
+	 * Do nothing.
+	 */
 	virtual void act();
 };
 
