@@ -12,4 +12,5 @@ CTestTestfile.cmake
 /libSDL2
 *.sln
 /manifest.rc
-/include/cmake_params.hpp
+/include/cmake_params.h
+/FenixEngine.pc
