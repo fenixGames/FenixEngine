@@ -9,8 +9,9 @@ compile_commands.json
 CTestTestfile.cmake
 /.vs
 /build
+/compile
 /libSDL2
 *.sln
 /manifest.rc
-/include/cmake_params.h
+/include/FenixEngine.h
 /FenixEngine.pc
