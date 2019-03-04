@@ -5,7 +5,9 @@
 #ifndef GRAPHIC_HPP
 #define GRAPHIC_HPP
 
+#ifndef FENIX_ENGINE_H
 #include <os.h>
+#endif
 
 /** API of a graphic resource, which should return a texture to render.
 */

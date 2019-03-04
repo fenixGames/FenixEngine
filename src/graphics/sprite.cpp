@@ -2,7 +2,7 @@
 
 #include <SDL_image.h>
 
-#include <graphics/sprite.h>
+#include <sprite.h>
 #include <exceptions.h>
 
 Sprite::Sprite(std::string path_to_file, const Color& alpha, SDL_Renderer * renderer) :

@@ -1,4 +1,4 @@
-#include <graphics/graphic.h>
+#include <graphic.h>
 
 Color::Color(uint8_t red, uint8_t green, uint8_t blue) {
 	this->red = red;

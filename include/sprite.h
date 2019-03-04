@@ -6,8 +6,10 @@
 #define SPRITE_HPP
 #include <string>
 
-#include <graphics/graphic.h>
+#ifndef FENIX_ENGINE_H
+#include <graphic.h>
 #include <os.h>
+#endif
 
 /** Representation of a Sprite
  * A sprite is an image loaded on a game moving around.

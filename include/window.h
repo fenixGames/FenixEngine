@@ -7,8 +7,10 @@
 #include <string>
 #include <list>
 
+#ifndef FENIX_ENGINE_H
 #include <scene.h>
 #include <os.h>
+#endif
 
 class Window {
 private:

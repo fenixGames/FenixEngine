@@ -5,7 +5,6 @@
 
 #ifndef GEOMETRY_HPP
 #define GEOMETRY_HPP
-#include <atomic>
 
 /**
  * Representation of a point on the world.

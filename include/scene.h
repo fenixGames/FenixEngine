@@ -7,10 +7,12 @@
 
 #include <list>
 
-#include <nodes/node.h>
-#include <events/event_handler.h>
+#ifndef FENIX_ENGINE_H
+#include <node.h>
+#include <event_handler.h>
 #include <viewport.h>
 #include <os.h>
+#endif
 
 class Scene {
 protected:

@@ -19,18 +19,19 @@ SET(
 
 SET(
 	INCLUDE_FILES
+		include/${PROJECT_NAME}.h
 		include/exceptions.h
 		include/os.h
 		include/scene.h
 		include/viewport.h
 		include/window.h
-		include/events/event_handler.h
-		include/graphics/graphic.h
-		include/graphics/sprite.h
-		include/graphics/text.h
-		include/nodes/draggable_node.h
-		include/nodes/node.h
-		include/physics/geometry.h
+		include/event_handler.h
+		include/graphic.h
+		include/sprite.h
+		include/text.h
+		include/draggable_node.h
+		include/node.h
+		include/geometry.h
 )
 
 IF (NOT PREFIX)
@@ -38,8 +39,8 @@ IF (NOT PREFIX)
 ENDIF (NOT PREFIX)
 
 CONFIGURE_FILE(
-	"${CMAKE_CURRENT_SOURCE_DIR}/include/cmake_params.h.in"
-	"${CMAKE_CURRENT_SOURCE_DIR}/include/cmake_params.h"
+	"${CMAKE_CURRENT_SOURCE_DIR}/include/${PROJECT_NAME}.h.in"
+	"${CMAKE_CURRENT_SOURCE_DIR}/include/${PROJECT_NAME}.h"
 	NEWLINE_STYLE "UNIX")
 
 INCLUDE_DIRECTORIES("${CMAKE_CURRENT_SOURCE_DIR}/include")
@@ -69,7 +70,7 @@ FIND_LIBRARY(SDL2_IMAGE_LIBRARY SDL2_image PATHS ${SYSTEM_LIB_PATHS})
 FIND_LIBRARY(SDL2_TTF_LIBRARY SDL2_ttf PATHS ${SYSTEM_LIB_PATHS})
 
 SET(INSTALL_LIBDIR "${PREFIX}/lib")
-SET(INSTALL_INCLUDEDIR "${PREFIX}/include")
+SET(INSTALL_INCLUDEDIR "${PREFIX}/include/${PROJECT_NAME}")
 
 CONFIGURE_FILE(${PROJECT_NAME}.pc.in ${PROJECT_NAME}.pc @ONLY)
 

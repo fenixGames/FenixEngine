@@ -1,4 +1,4 @@
-#include <graphics/text.h>
+#include <text.h>
 #include <exceptions.h>
 
 Text::Text(

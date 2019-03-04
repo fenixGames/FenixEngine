@@ -1,6 +1,10 @@
 #ifndef DRAGGABLE_NODE_HPP
 #define DRAGGABLE_NODE_HPP
-#include <nodes/node.h>
+
+
+#ifndef FENIX_ENGINE_H
+#include <node.h>
+#endif
 
 /** An object that can be dragged with the mouse and dropped somewhere else.
  */

@@ -1,0 +1,25 @@
+#ifndef FENIX_ENGINE_H
+#define FENIX_ENGINE_H
+
+#ifdef WIN32
+#include <SDL.h>
+#include <SDL_ttf.h>
+#include <SDL_image.h>
+#else
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_ttf.h>
+#include <SDL2/SDL_image.h>
+#endif
+
+#include <@PROJECT_NAME@/geometry.h>
+#include <@PROJECT_NAME@/exceptions.h>
+#include <@PROJECT_NAME@/graphic.h>
+#include <@PROJECT_NAME@/sprite.h>
+#include <@PROJECT_NAME@/text.h>
+#include <@PROJECT_NAME@/node.h>
+#include <@PROJECT_NAME@/draggable_node.h>
+#include <@PROJECT_NAME@/event_handler.h>
+#include <@PROJECT_NAME@/viewport.h>
+#include <@PROJECT_NAME@/scene.h>
+#include <@PROJECT_NAME@/window.h>
+#endif

@@ -10,7 +10,9 @@
 
 #include <list>
 
+#ifndef FENIX_ENGINE_H
 #include <os.h>
+#endif
 
 /** API for SDL event handling.
  */

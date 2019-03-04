@@ -2,8 +2,10 @@
 #define TEXT_HPP
 #include <string>
 
+#ifndef FENIX_ENGINE_H
 #include <os.h>
-#include <graphics/graphic.h>
+#include <graphic.h>
+#endif
 
 class Text : public Graphic {
 protected:

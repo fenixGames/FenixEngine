@@ -7,9 +7,11 @@
 #include <mutex>
 #include <list>
 
-#include <physics/geometry.h>
-#include <nodes/node.h>
+#ifndef FENIX_ENGINE_H
+#include <geometry.h>
+#include <node.h>
 #include <os.h>
+#endif
 
 /**
  * The viewport class is a representation of a "camera", it can be moved as

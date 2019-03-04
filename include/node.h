@@ -9,9 +9,11 @@
 #include <mutex>
 #include <list>
 
-#include <physics/geometry.h>
-#include <graphics/graphic.h>
+#ifndef FENIX_ENGINE_H
+#include <geometry.h>
+#include <graphic.h>
 #include <os.h>
+#endif
 
 /** Representation of a game object.
  */
