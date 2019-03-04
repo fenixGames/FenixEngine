@@ -17,9 +17,21 @@ SET(
 		src/graphics/graphic.cpp
 )
 
-#SET(
-#	INCLUDE_FILES ""
-#)
+SET(
+	INCLUDE_FILES
+		include/exceptions.h
+		include/os.h
+		include/scene.h
+		include/viewport.h
+		include/window.h
+		include/events/event_handler.h
+		include/graphics/graphic.h
+		include/graphics/sprite.h
+		include/graphics/text.h
+		include/nodes/draggable_node.h
+		include/nodes/node.h
+		include/physics/geometry.h
+)
 
 IF (NOT PREFIX)
 	SET(PREFIX ${CMAKE_CURRENT_SOURCE_DIR}/build)
