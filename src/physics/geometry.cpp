@@ -1,4 +1,4 @@
-#include <physics/geometry.hpp>
+#include <physics/geometry.h>
 
 Point::Point(): Point(0.0, 0.0) {
 }

@@ -1,6 +1,6 @@
 #ifndef DRAGGABLE_NODE_HPP
 #define DRAGGABLE_NODE_HPP
-#include <nodes/node.hpp>
+#include <nodes/node.h>
 
 /** An object that can be dragged with the mouse and dropped somewhere else.
  */

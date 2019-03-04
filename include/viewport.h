@@ -7,9 +7,9 @@
 #include <mutex>
 #include <list>
 
-#include <physics/geometry.hpp>
-#include <nodes/node.hpp>
-#include <os.hpp>
+#include <physics/geometry.h>
+#include <nodes/node.h>
+#include <os.h>
 
 /**
  * The viewport class is a representation of a "camera", it can be moved as

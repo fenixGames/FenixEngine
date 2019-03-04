@@ -26,8 +26,8 @@ IF (NOT PREFIX)
 ENDIF (NOT PREFIX)
 
 CONFIGURE_FILE(
-	"${CMAKE_CURRENT_SOURCE_DIR}/include/cmake_params.hpp.in"
-	"${CMAKE_CURRENT_SOURCE_DIR}/include/cmake_params.hpp"
+	"${CMAKE_CURRENT_SOURCE_DIR}/include/cmake_params.h.in"
+	"${CMAKE_CURRENT_SOURCE_DIR}/include/cmake_params.h"
 	NEWLINE_STYLE "UNIX")
 
 INCLUDE_DIRECTORIES("${CMAKE_CURRENT_SOURCE_DIR}/include")

@@ -1,7 +1,7 @@
 #include <string>
 
-#include <window.hpp>
-#include <exceptions.hpp>
+#include <window.h>
+#include <exceptions.h>
 #include <SDL_image.h>
 #include <SDL_ttf.h>
 

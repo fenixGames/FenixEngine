@@ -7,8 +7,8 @@
 #include <string>
 #include <list>
 
-#include <scene.hpp>
-#include <os.hpp>
+#include <scene.h>
+#include <os.h>
 
 class Window {
 private:

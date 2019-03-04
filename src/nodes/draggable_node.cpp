@@ -1,4 +1,4 @@
-#include <nodes/draggable_node.hpp>
+#include <nodes/draggable_node.h>
 
 DraggableNode::DraggableNode() :
 	DraggableNode(Point(), Size()) {

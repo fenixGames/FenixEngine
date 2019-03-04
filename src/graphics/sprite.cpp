@@ -2,8 +2,8 @@
 
 #include <SDL_image.h>
 
-#include <graphics/sprite.hpp>
-#include <exceptions.hpp>
+#include <graphics/sprite.h>
+#include <exceptions.h>
 
 Sprite::Sprite(std::string path_to_file, const Color& alpha, SDL_Renderer * renderer) :
 	Sprite(path_to_file.c_str(), alpha, renderer) {

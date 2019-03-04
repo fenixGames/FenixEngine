@@ -1,4 +1,4 @@
-#include <viewport.hpp>
+#include <viewport.h>
 #include <string.h>
 
 Viewport::Viewport(const Viewport& viewPort) :

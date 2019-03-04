@@ -2,8 +2,8 @@
 #define TEXT_HPP
 #include <string>
 
-#include <os.hpp>
-#include <graphics/graphic.hpp>
+#include <os.h>
+#include <graphics/graphic.h>
 
 class Text : public Graphic {
 protected:

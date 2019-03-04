@@ -10,7 +10,7 @@
 
 #include <list>
 
-#include <os.hpp>
+#include <os.h>
 
 /** API for SDL event handling.
  */

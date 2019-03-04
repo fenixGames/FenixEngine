@@ -1,4 +1,4 @@
-#include <nodes/node.hpp>
+#include <nodes/node.h>
 
 BasicNode::BasicNode() : BasicNode(Point(0, 0), Size(0, 0))
 {

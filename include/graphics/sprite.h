@@ -6,8 +6,8 @@
 #define SPRITE_HPP
 #include <string>
 
-#include <graphics/graphic.hpp>
-#include <os.hpp>
+#include <graphics/graphic.h>
+#include <os.h>
 
 /** Representation of a Sprite
  * A sprite is an image loaded on a game moving around.

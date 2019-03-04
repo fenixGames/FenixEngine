@@ -9,9 +9,9 @@
 #include <mutex>
 #include <list>
 
-#include <physics/geometry.hpp>
-#include <graphics/graphic.hpp>
-#include <os.hpp>
+#include <physics/geometry.h>
+#include <graphics/graphic.h>
+#include <os.h>
 
 /** Representation of a game object.
  */

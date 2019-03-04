@@ -5,7 +5,7 @@
 #ifndef GRAPHIC_HPP
 #define GRAPHIC_HPP
 
-#include <os.hpp>
+#include <os.h>
 
 /** API of a graphic resource, which should return a texture to render.
 */

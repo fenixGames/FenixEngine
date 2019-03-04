@@ -1,5 +1,5 @@
-#include <graphics/text.hpp>
-#include <exceptions.hpp>
+#include <graphics/text.h>
+#include <exceptions.h>
 
 Text::Text(
 	const std::string fontName, 

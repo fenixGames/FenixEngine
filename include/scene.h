@@ -7,10 +7,10 @@
 
 #include <list>
 
-#include <nodes/node.hpp>
-#include <events/event_handler.hpp>
-#include <viewport.hpp>
-#include <os.hpp>
+#include <nodes/node.h>
+#include <events/event_handler.h>
+#include <viewport.h>
+#include <os.h>
 
 class Scene {
 protected:
