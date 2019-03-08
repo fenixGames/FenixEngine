@@ -100,7 +100,7 @@ public:
 	/** Initializes the exception with a message.
 	 * \param msg The message of the exception.
 	 */
-	SDLTTFException(const std::stringi msg);
+	SDLTTFException(const std::string msg);
 
 	/** Appends the SDL_ttf error to the message of the exception.\
 	 * \return The message of the exception with the SDL_ttf error.
