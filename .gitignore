@@ -15,3 +15,6 @@ CTestTestfile.cmake
 /manifest.rc
 /include/FenixEngine.h
 /FenixEngine.pc
+/Debug
+/x64/Debug/FenixEng.56B0335A.tlog
+/x64/Debug
