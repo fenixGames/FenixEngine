@@ -2,8 +2,8 @@
 
 #include <window.h>
 #include <exceptions.h>
-#include <SDL_image.h>
-#include <SDL_ttf.h>
+#include <SDL2/SDL_image.h>
+#include <SDL2/SDL_ttf.h>
 
 Window::Window(int width, int height, std::string title) {
 	if (SDL_Init(SDL_INIT_EVERYTHING) < 0)

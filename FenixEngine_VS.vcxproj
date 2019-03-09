@@ -66,8 +66,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\heagle\source\repos\FenixEngine\include;C:\SDL2-Image\include;C:\SDL2_ttf\include;C:\SDL2\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\heagle\source\repos\FenixEngine\libSDL2\$(PROCESSOR_ARCHITECTURE);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)include;C:\devel\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\devel\lib\$(PlatformTarget);$(LibraryPath)</LibraryPath>
     <TargetName>$(SolutionName)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -76,8 +76,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <TargetName>$(SolutionName)</TargetName>
     <TargetExt>.lib</TargetExt>
-    <IncludePath>C:\SDL2-Image\include;C:\SDL2_ttf\include;C:\SDL2\include;$(SolutionDir)/include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)\libSDL2\$(Platform);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)include;C:\devel\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\devel\lib\$(PlatformTarget);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
