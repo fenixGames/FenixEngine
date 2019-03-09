@@ -21,3 +21,5 @@ CTestTestfile.cmake
 /CMakeSettings.json
 /CppProperties.json
 /manifest.aps
+/Release
+/x64/Release
