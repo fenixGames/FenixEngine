@@ -1,0 +1,1 @@
+MESSAGE(FATAL_ERROR "This project cannot be compiled by CMake, please use visual studio to compile it")
