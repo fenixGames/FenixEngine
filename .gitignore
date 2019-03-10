@@ -23,3 +23,8 @@ CTestTestfile.cmake
 /manifest.aps
 /Release
 /x64/Release
+/FenixEngine_SHARED/Debug
+/FenixEngine_SHARED/Release
+/Win32
+/deploy
+/msbuild.help
