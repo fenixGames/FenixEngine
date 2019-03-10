@@ -69,24 +69,32 @@
     <IncludePath>$(SolutionDir)include;C:\devel\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\devel\lib\$(PlatformTarget);$(LibraryPath)</LibraryPath>
     <TargetName>$(SolutionName)</TargetName>
+    <OutDir>$(SolutionDir)$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <TargetName>$(SolutionName)</TargetName>
     <IncludePath>$(SolutionDir)include;C:\devel\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\devel\lib\$(PlatformTarget);$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <TargetName>$(SolutionName)</TargetName>
     <TargetExt>.lib</TargetExt>
     <IncludePath>$(SolutionDir)include;C:\devel\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\devel\lib\$(PlatformTarget);$(LibraryPath)</LibraryPath>
+    <IntDir>$(SolutionDir)$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)$(Configuration)\$(Platform)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <TargetName>$(SolutionName)</TargetName>
     <TargetExt>.lib</TargetExt>
     <IncludePath>$(SolutionDir)include;C:\devel\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\devel\lib\$(PlatformTarget);$(LibraryPath)</LibraryPath>
+    <IntDir>$(SolutionDir)$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)$(Configuration)\$(Platform)\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -123,8 +131,6 @@
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="compile\cmakefiles\3.13.4\compileridcxx\CMakeCXXCompilerId.cpp" />
-    <ClCompile Include="compile\cmakefiles\3.13.4\compileridc\CMakeCCompilerId.c" />
     <ClCompile Include="src\events\event_handler.cpp" />
     <ClCompile Include="src\exceptions.cpp" />
     <ClCompile Include="src\graphics\graphic.cpp" />
@@ -139,6 +145,24 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="manifest.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\draggable_node.h" />
+    <ClInclude Include="include\event_handler.h" />
+    <ClInclude Include="include\exceptions.h" />
+    <ClInclude Include="include\FenixEngine.h" />
+    <ClInclude Include="include\geometry.h" />
+    <ClInclude Include="include\graphic.h" />
+    <ClInclude Include="include\node.h" />
+    <ClInclude Include="include\os.h" />
+    <ClInclude Include="include\scene.h" />
+    <ClInclude Include="include\sprite.h" />
+    <ClInclude Include="include\text.h" />
+    <ClInclude Include="include\viewport.h" />
+    <ClInclude Include="include\window.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="include\FenixEngine.h.in" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
