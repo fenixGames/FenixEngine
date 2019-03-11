@@ -34,7 +34,7 @@ public:
 	 *  \param height The height of the window.
 	 *  \param title The title to be shown on the title bar.
 	 */
-	Window(int, int, std::string);
+	Window(int width, int height, std::string title);
 
 	/** Frees memory.
 	 *
