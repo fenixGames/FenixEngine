@@ -19,7 +19,7 @@ Scene::draw()
 
 	SDL_RenderClear(this->renderer);
 	for (itViews = this->viewports.begin(); itViews != this->viewports.end(); itViews++) {
-		(*itViews)->renderNodes(&this->nodes);
+		(*itViews)->render();
 	}
 	SDL_RenderPresent(this->renderer);
 }

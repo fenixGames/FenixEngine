@@ -39,6 +39,11 @@ Viewport::setRenderer(SDL_Renderer * renderer) {
 }
 
 void
+Viewport::render() {
+	this->renderNodes(&this->nodes);
+}
+
+void
 Viewport::renderNodes(std::list<BasicNode *> *listNodes) {
 	std::list<BasicNode *>::iterator itNodes;
 	SDL_Rect stretchRect;

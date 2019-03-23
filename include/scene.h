@@ -30,8 +30,6 @@ protected:
 public:
 	EventController * evController; // <* The event controller used for the
 					//    events occurring on the screen.
-	std::list<BasicNode *> nodes; // <* The list of nodes belonging to the
-				      //    scene.
 
 	/** Initializes the scene.
 	 */

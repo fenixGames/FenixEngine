@@ -41,7 +41,14 @@ protected:
 	SDL_Rect viewport; // <* The viewport's limits
 	SDL_Renderer * renderer; // <* The renderer to draw the viewport on screen.
 
+	/** Starts rendering nodes that are visible.
+	 * \param nodeList The list of nodes that belongs to the scene.
+	 */
+	void renderNodes(std::list<BasicNode *> *nodeList);
+
 public:
+	std::list<BasicNode *> nodes; // <* The list of nodes belonging to the
+				      //    scene.
 	/** Initializes the viewport using its limits and the renderer.
 	 * \param limits The limits of the viewport.
 	 * \param renderer The renderer to draw the viewport.
@@ -60,9 +67,8 @@ public:
 	 */
 	Viewport(const Viewport& viewport);
 
-	/** Starts rendering nodes that are visible.
-	 * \param nodeList The list of nodes that belongs to the scene.
+	/** Renders all nodes on the viewport.
 	 */
-	void renderNodes(std::list<BasicNode *> *);
+	void render();
 };
 #endif
