@@ -16,8 +16,10 @@ main(int argc, char **argv)
 	Scene scene;
 	EventController controller;
 
+	controller.addEventHandler(new QuitHandler());
 	scene.setRenderer(win.getRenderer());
 	scene.evController = &controller;
+	win.sceneList.push_back(&scene);
 	win.start();
 
 	return 0;
