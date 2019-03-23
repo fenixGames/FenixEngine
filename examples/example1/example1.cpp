@@ -19,4 +19,6 @@ main(int argc, char **argv)
 	scene.setRenderer(win.getRenderer());
 	scene.evController = &controller;
 	win.start();
+
+	return 0;
 }
