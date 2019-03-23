@@ -173,6 +173,7 @@
   <ItemGroup>
     <ClCompile Include="src\events\event_handler.cpp" />
     <ClCompile Include="src\exceptions.cpp" />
+    <ClCompile Include="src\graphics\filled_rect.cpp" />
     <ClCompile Include="src\graphics\graphic.cpp" />
     <ClCompile Include="src\graphics\sprite.cpp" />
     <ClCompile Include="src\graphics\text.cpp" />
@@ -191,6 +192,7 @@
     <ClInclude Include="include\event_handler.h" />
     <ClInclude Include="include\exceptions.h" />
     <ClInclude Include="include\FenixEngine.h" />
+    <ClInclude Include="include\filled_rect.h" />
     <ClInclude Include="include\geometry.h" />
     <ClInclude Include="include\graphic.h" />
     <ClInclude Include="include\node.h" />
