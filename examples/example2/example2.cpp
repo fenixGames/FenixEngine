@@ -26,7 +26,7 @@ main(int argc, char **argv)
 	scene.setRenderer(win.getRenderer());
 	scene.evController = &controller;
 	scene.addViewport(&viewport);
-	scene.nodes.push_back(&node);
+	viewport.nodes.push_back(&node);
 	win.sceneList.push_back(&scene);
 	win.start();
 
