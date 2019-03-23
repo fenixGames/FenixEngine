@@ -7,6 +7,7 @@
 
 #ifndef FENIX_ENGINE_H
 #include <os.h>
+#include <geometry.h>
 #endif
 
 /** API of a graphic resource, which should return a texture to render.
@@ -19,6 +20,12 @@ public:
 	 *\note It MUST be overriden by classes extending this one.
 	 */
 	virtual SDL_Texture * getTexture() = 0;
+
+	/** Retrieves the size of the graphical resource used to paint it.
+	 *
+	 * \return The size of the graphical resource.
+	 */
+	virtual Size& getSize() = 0;
 };
 
 /** Representation of a RGB color.

@@ -16,7 +16,6 @@ void
 Scene::draw()
 {
 	std::list<Viewport *>::iterator itViews;
-	SDL_Rect stretchRect;
 
 	SDL_RenderClear(this->renderer);
 	for (itViews = this->viewports.begin(); itViews != this->viewports.end(); itViews++) {

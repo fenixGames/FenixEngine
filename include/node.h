@@ -21,7 +21,6 @@ class BasicNode {
 protected:
 	Graphic * graphicResource; // <* The graphical resource associated.
 	Point position; // <* Position of the object on the world.
-	Size size; // <* Size of the object.
 
 	/* A node uses relative coordinates, 
 	   so we need to keep track of the ancestory to
@@ -35,21 +34,15 @@ public:
 	 */
 	BasicNode();
 
-	/**Creates an object of the size `size` in the position `position`.
+	/**Creates an object in the position `position`.
 	 * \param position The position of the new object.
-	 * \param size The size of the object to create.
 	 */
-	BasicNode(const Point& position, const Size& size);
+	BasicNode(const Point& position);
 
 	/** Sets the position of the object to a new place.
 	 * \param position The new position of the node.
 	 */
 	void setPosition(const Point& position);
-
-	/** Resizes the object.
-	 * \param size The new size of the object.
-	 */
-	void setSize(const Size& size);
 
 	/** Retrieves the texture from the graphical resource associated to the node.
 	 * \return The Texture belonging to the attached graphical resource.
@@ -93,7 +86,7 @@ public:
 	 * \param position The position of the new object.
 	 * \param size The size of the object to create.
 	 */
-	Node(const Point& position, const Size& size);
+	Node(const Point& position);
 
 	/** Action of the Node.
 	 * Do nothing.

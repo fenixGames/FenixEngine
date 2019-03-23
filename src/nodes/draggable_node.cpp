@@ -1,11 +1,11 @@
 #include <draggable_node.h>
 
 DraggableNode::DraggableNode() :
-	DraggableNode(Point(), Size()) {
+	DraggableNode(Point()) {
 }
 
-DraggableNode::DraggableNode(const Point& position, const Size& size) :
-	Node(position, size) {
+DraggableNode::DraggableNode(const Point& position) :
+	Node(position) {
 	this->isDragged = false;
 }
 

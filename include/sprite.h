@@ -44,6 +44,12 @@ public:
 	 */
 	virtual SDL_Texture * getTexture();
 
+	/** Retrieves the size of the graphical resource used to paint it.
+	 *
+	 * \return The size of the graphical resource.
+	 */
+	virtual Size& getSize();
+
 	/** Sets the modification color to the texture.
 	 * Alters a texture by setting a color to modify how it looks.
 	 *

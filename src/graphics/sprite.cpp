@@ -61,3 +61,14 @@ void
 Sprite::setBlendingMode(SDL_BlendMode mode) {
 	SDL_SetTextureBlendMode(this->texture, mode);
 }
+
+Size&
+Sprite::getSize() {
+	Size size;
+	Uint32 format;
+	int access;
+
+	if (SDL_QueryTexture(this->texture, &format, &access, &size.width, &size.height) < 0)
+		throw SDLException("Could not query texture");
+	return size;
+}

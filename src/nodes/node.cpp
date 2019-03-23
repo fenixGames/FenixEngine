@@ -1,13 +1,12 @@
 #include <node.h>
 
-BasicNode::BasicNode() : BasicNode(Point(0, 0), Size(0, 0))
+BasicNode::BasicNode() : BasicNode(Point(0, 0))
 {
 }
 
-BasicNode::BasicNode(const Point& startPoint, const Size& startSize)
+BasicNode::BasicNode(const Point& startPoint)
 {
 	this->setPosition(startPoint);
-	this->setSize(startSize);
 	this->setGraphicResource(NULL);
 	this->parent = NULL;
 }
@@ -31,9 +30,13 @@ BasicNode::setGraphicResource(Graphic * resource) {
 void 
 BasicNode::fillDimentions(SDL_Rect *rect) {
 	BasicNode * root = this;
+	Size size;
 
-	rect->w = (int)this->size.width;
-	rect->h = (int)this->size.height;
+	if (this->graphicResource != NULL)
+		size = this->graphicResource->getSize();
+
+	rect->w = (int)size.width;
+	rect->h = (int)size.height;
 
 	rect->x = rect->y = 0;
 	while (root != NULL) {
@@ -46,11 +49,6 @@ BasicNode::fillDimentions(SDL_Rect *rect) {
 void
 BasicNode::setPosition(const Point& point) {
 	this->position = point;
-}
-
-void
-BasicNode::setSize(const Size& size) {
-	this->size = size;
 }
 
 void
@@ -70,7 +68,7 @@ Node::Node(): BasicNode()
 {
 }
 
-Node::Node(const Point& position, const Size& size) : BasicNode(position, size)
+Node::Node(const Point& position) : BasicNode(position)
 {
 }
 
