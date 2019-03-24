@@ -6,7 +6,9 @@
 #ifndef GEOMETRY_HPP
 #define GEOMETRY_HPP
 
+#ifndef FENIX_ENGINE_H
 #include <game_component.h>
+#endif // FENIX_ENGINE_H
 
 /**
  * Representation of a point on the world.
