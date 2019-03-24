@@ -1,14 +1,20 @@
 #include <node.h>
+#include <typeinfo>
 
-BasicNode::BasicNode() : BasicNode(Point(0, 0))
+
+BasicNode::BasicNode() : BasicNode(Vector(0, 0))
 {
 }
 
-BasicNode::BasicNode(const Point& startPoint)
+BasicNode::BasicNode(const Vector& startPoint)
 {
-	this->setPosition(startPoint);
+	Transform * transform = new Transform();
 	this->setGraphicResource(NULL);
 	this->parent = NULL;
+
+	transform->position = startPoint;
+	transform->scale = Vector(1, 1);
+	this->addGameComponent(transform);
 }
 
 
@@ -16,6 +22,7 @@ SDL_Texture *
 BasicNode::getTexture()
 {
 	SDL_Texture * texture = NULL;
+	Graphic * graphicResource = getComponentOfType<Graphic>();
 
 	if (graphicResource != NULL)
 		texture = graphicResource->getTexture();
@@ -24,31 +31,28 @@ BasicNode::getTexture()
 
 void
 BasicNode::setGraphicResource(Graphic * resource) {
-	graphicResource = resource;
+	this->addGameComponent(resource);
 }
 
 void 
 BasicNode::fillDimentions(SDL_Rect *rect) {
 	BasicNode * root = this;
 	Size size;
+	Graphic * graphicResource = getComponentOfType<Graphic>();
 
-	if (this->graphicResource != NULL)
-		size = this->graphicResource->getSize();
+	if (graphicResource != NULL)
+		size = graphicResource->getSize();
 
 	rect->w = (int)size.width;
 	rect->h = (int)size.height;
 
 	rect->x = rect->y = 0;
 	while (root != NULL) {
-		rect->x += (int)root->position.x;
-		rect->y += (int)root->position.y;
+		const Vector& position = root->getComponentOfType<Transform>()->position;
+		rect->x += (int)position.x;
+		rect->y += (int)position.y;
 		root = root->parent;
 	}
-}
-
-void
-BasicNode::setPosition(const Point& point) {
-	this->position = point;
 }
 
 void
@@ -64,11 +68,32 @@ BasicNode::getChildren()
 	return &this->children;
 }
 
+template<class Type>
+Type *
+BasicNode::getComponentOfType()
+{
+	std::list<GameComponent *>::iterator iterator;
+
+	for (iterator = this->components->begin();
+		iterator != this->components->end(); iterator++)
+		if (typeid(**iterator) == typeid(Type)
+			return *iterator;
+
+	return NULL;
+}
+
+void
+BasicNode::addGameComponent(GameComponent * component)
+{
+	this->components.push_back(component);
+}
+
+/********************* Node ********************************/
 Node::Node(): BasicNode()
 {
 }
 
-Node::Node(const Point& position) : BasicNode(position)
+Node::Node(const Vector& position) : BasicNode(position)
 {
 }
 

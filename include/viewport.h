@@ -60,7 +60,7 @@ public:
 	 * \param size The width and height of the viewport.
 	 * \param renderer The renderer to draw the viewport.
 	 */
-	Viewport(const Point& upperLeft, const Size& size, SDL_Renderer *renderer);
+	Viewport(const Vector& upperLeft, const Size& size, SDL_Renderer *renderer);
 
 	/** Copies a viewport.
 	 * \param viewport The viewport to copy.

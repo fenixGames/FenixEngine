@@ -13,14 +13,14 @@
 #include <geometry.h>
 #include <graphic.h>
 #include <os.h>
+#include <game_component.h>
 #endif
 
 /** Representation of a game object.
  */
 class BasicNode {
 protected:
-	Graphic * graphicResource; // <* The graphical resource associated.
-	Point position; // <* Position of the object on the world.
+	std::list<GameComponent *> components; // <* List of game components.
 
 	/* A node uses relative coordinates, 
 	   so we need to keep track of the ancestory to
@@ -37,12 +37,7 @@ public:
 	/**Creates an object in the position `position`.
 	 * \param position The position of the new object.
 	 */
-	BasicNode(const Point& position);
-
-	/** Sets the position of the object to a new place.
-	 * \param position The new position of the node.
-	 */
-	void setPosition(const Point& position);
+	BasicNode(const Vector& position);
 
 	/** Retrieves the texture from the graphical resource associated to the node.
 	 * \return The Texture belonging to the attached graphical resource.
@@ -69,6 +64,17 @@ public:
 	 */
 	std::list<BasicNode *> * getChildren();
 
+	/** Adds a game component to the object.
+	 * \param component The game component to attach.
+	 */
+	void addGameComponent(GameComponent * component);
+
+	/** Gets the component of the type given.
+	 * \return The component specified.
+	 */
+	template <class Type>
+	Type * getComponentOfType();
+
 	/** A virtual function to allow the node to perform actions on itself after printing.
 	 */
 	virtual void act() = 0;
@@ -86,7 +92,7 @@ public:
 	 * \param position The position of the new object.
 	 * \param size The size of the object to create.
 	 */
-	Node(const Point& position);
+	Node(const Vector& position);
 
 	/** Action of the Node.
 	 * Do nothing.

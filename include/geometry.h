@@ -6,37 +6,39 @@
 #ifndef GEOMETRY_HPP
 #define GEOMETRY_HPP
 
+#include <game_component.h>
+
 /**
  * Representation of a point on the world.
  */
-class Point {
+class Vector {
 public:
 	float x;
 	float y;
 
 	// Start point (0, 0)
-	Point();
+	Vector();
 
 	/** Representation of the point on the coordinates (x, y)
 	 * \param x The X coordinate on the Euclidian system.
 	 * \param y The Y coordinate on the Euclidian system.
 	 */
-	Point(float x , float y);
+	Vector(float x , float y);
 
 	/**
 	 * Creates a point representation from other point.
 	 */
-	Point(const Point& point);
+	Vector(const Vector& point);
 
 	/** Addition of two point calculated as x1 + x2, y1 + y2
 	 *\param point The point to add to the current one.
 	 */
-	Point operator + (const Point&);
+	Vector operator + (const Vector&);
 
 	/** Substraction of two point calculated as x1 - x2, y1 - y2
 	 * \param point The point to substract to the current one.
 	 */
-	Point operator - (const Point&);
+	Vector operator - (const Vector&);
 };
 
 /** Representation of a size in 2D width x height.
@@ -68,4 +70,14 @@ public:
 	 */
 	bool operator== (const Size& other);
 };
+
+/** Creates a transformation matrix.
+ */
+class Transform : public GameComponent {
+public:
+	Vector position; // <* Indicates the position of the game object.
+	Vector rotation; // <* Indicates the rotation of the game object.
+	Vector scale; // <* Indicates the scalation of the game object.
+};
+
 #endif

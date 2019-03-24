@@ -1,24 +1,24 @@
 #include <geometry.h>
 
-Point::Point(): Point(0.0, 0.0) {
+Vector::Vector(): Vector(0.0, 0.0) {
 }
 
-Point::Point(float x, float y) {
+Vector::Vector(float x, float y) {
 	this->x = x;
 	this->y = y;
 }
 
-Point::Point(const Point& point): Point(point.x, point.y) {
+Vector::Vector(const Vector& point): Vector(point.x, point.y) {
 }
 
-Point
-Point::operator+(const Point& point) {
-	return Point(x + point.x, y + point.y);
+Vector
+Vector::operator+(const Vector& point) {
+	return Vector(x + point.x, y + point.y);
 }
 
-Point
-Point::operator-(const Point& point) {
-	return Point(x - point.x, y - point.y);
+Vector
+Vector::operator-(const Vector& point) {
+	return Vector(x - point.x, y - point.y);
 }
 
 Size::Size(): Size(0, 0) {

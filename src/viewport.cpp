@@ -6,7 +6,7 @@ Viewport::Viewport(const Viewport& viewPort) :
 }
 
 Viewport::Viewport(
-	const Point& viewportPosition,
+	const Vector& viewportPosition,
 	const Size& viewportSize,
 	SDL_Renderer * renderer) {
 	SDL_Rect viewport;

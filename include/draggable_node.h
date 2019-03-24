@@ -20,7 +20,7 @@ public:
 	 * \param position The point where the node should appear first.
 	 * \param size The size of the object.
 	 */
-	DraggableNode(const Point&);
+	DraggableNode(const Vector&);
 
 	/** Sets the object to have been dragged.
 	 */
