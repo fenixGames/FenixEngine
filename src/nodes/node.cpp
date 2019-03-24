@@ -74,10 +74,10 @@ BasicNode::getComponentOfType()
 {
 	std::list<GameComponent *>::iterator iterator;
 
-	for (iterator = this->components->begin();
-		iterator != this->components->end(); iterator++)
-		if (typeid(**iterator) == typeid(Type)
-			return *iterator;
+	for (iterator = this->components.begin();
+		iterator != this->components.end(); iterator++)
+		if (typeid(**iterator) == typeid(Type))
+			return (Type *) *iterator;
 
 	return NULL;
 }
