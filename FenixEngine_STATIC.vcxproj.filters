@@ -100,6 +100,9 @@
     <ClInclude Include="include\filled_rect.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\game_component.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="include\FenixEngine.h.in">
