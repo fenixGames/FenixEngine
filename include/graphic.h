@@ -8,11 +8,12 @@
 #ifndef FENIX_ENGINE_H
 #include <os.h>
 #include <geometry.h>
+#include <game_component.h>
 #endif
 
 /** API of a graphic resource, which should return a texture to render.
 */
-class Graphic {
+class Graphic : public GameComponent {
 public:
 	/** Retrieves the texture from the resource.
 	 *
