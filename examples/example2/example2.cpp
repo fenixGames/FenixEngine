@@ -17,9 +17,9 @@ main(int argc, char **argv)
 	Window win(WIN_WIDTH, WIN_HEIGHT, "Example2");
 	Scene scene;
 	EventController controller;
-	Viewport viewport(Point(0, 0), Size(WIN_WIDTH, WIN_HEIGHT), win.getRenderer());
+	Viewport viewport(Vector(0, 0), Size(WIN_WIDTH, WIN_HEIGHT), win.getRenderer());
 	Sprite sprite(EXAMPLE_SPRITE_PATH, Color(0xFFFFFF), win.getRenderer());
-	Node node(Point(0, 0));
+	Node node(Vector(0, 0));
 
 	node.setGraphicResource(&sprite);
 	controller.addEventHandler(new QuitHandler());
