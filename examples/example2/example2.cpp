@@ -21,7 +21,7 @@ main(int argc, char **argv)
 	Sprite sprite(EXAMPLE_SPRITE_PATH, Color(0xFFFFFF), win.getRenderer());
 	Node node(Vector(0, 0));
 
-	node.setGraphicResource(&sprite);
+	node.addGameComponent(&sprite);
 	controller.addEventHandler(new QuitHandler());
 	scene.setRenderer(win.getRenderer());
 	scene.evController = &controller;
