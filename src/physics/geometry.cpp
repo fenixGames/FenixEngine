@@ -35,3 +35,5 @@ Size::Size(int width, int height) {
 	this->width = width;
 	this->height = height;
 }
+
+DEFINE_GET_TYPE(Transform);

@@ -80,6 +80,8 @@ public:
 	Vector position; // <* Indicates the position of the game object.
 	Vector rotation; // <* Indicates the rotation of the game object.
 	Vector scale; // <* Indicates the scalation of the game object.
+
+	GET_TYPE_DEFINITION();
 };
 
 #endif

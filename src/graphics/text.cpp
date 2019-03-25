@@ -29,3 +29,5 @@ SDL_Texture * Text::getTexture()
 	SDL_FreeSurface(textSurface);
 	return texture;
 }
+
+DEFINE_GET_TYPE(Text)

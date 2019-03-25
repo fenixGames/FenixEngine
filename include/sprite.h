@@ -9,6 +9,7 @@
 #ifndef FENIX_ENGINE_H
 #include <graphic.h>
 #include <os.h>
+#include <game_component.h>
 #endif
 
 /** Representation of a Sprite
@@ -48,7 +49,7 @@ public:
 	 *
 	 * \return The size of the graphical resource.
 	 */
-	virtual Size& getSize();
+	virtual const Size& getSize();
 
 	/** Sets the modification color to the texture.
 	 * Alters a texture by setting a color to modify how it looks.
@@ -68,5 +69,7 @@ public:
 	 * \param blendMode The blending mode to set.
 	 */
 	void setBlendingMode(SDL_BlendMode blendMode);
+
+	GET_TYPE_DEFINITION();
 };
 #endif

@@ -5,6 +5,7 @@
 #ifndef FENIX_ENGINE_H
 #include <os.h>
 #include <graphic.h>
+#include <game_component.h>
 #endif
 
 class Text : public Graphic {
@@ -18,5 +19,7 @@ public:
 
 	void setText(std::string);
 	virtual SDL_Texture * getTexture();
+
+	GET_TYPE_DEFINITION();
 };
 #endif

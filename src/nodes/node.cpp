@@ -9,7 +9,6 @@ BasicNode::BasicNode() : BasicNode(Vector(0, 0))
 BasicNode::BasicNode(const Vector& startPoint)
 {
 	Transform * transform = new Transform();
-	this->setGraphicResource(NULL);
 	this->parent = NULL;
 
 	transform->position = startPoint;
@@ -76,9 +75,11 @@ BasicNode::getComponentOfType()
 
 	for (iterator = this->components.begin();
 		iterator != this->components.end(); iterator++)
-		if (typeid(**iterator) == typeid(Type))
-			return (Type *) *iterator;
-
+	{
+		const std::type_info& type = (*iterator)->getType();
+		if (type == typeid(Type))
+			return (Type *)*iterator;
+	}
 	return NULL;
 }
 

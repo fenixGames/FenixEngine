@@ -26,7 +26,7 @@ public:
 	 *
 	 * \return The size of the graphical resource.
 	 */
-	virtual Size& getSize() = 0;
+	virtual const Size& getSize() = 0;
 };
 
 /** Representation of a RGB color.
@@ -49,5 +49,10 @@ public:
 	 * \param color The RGB representation of the color.
 	 */
 	Color(uint32_t rgb);
+
+	/** Gets the color in a unsigned integer of 32 bits.
+	 * \return The color as a uint32_t.
+	 */
+	const uint32_t getColorAsInt() const;
 };
 #endif

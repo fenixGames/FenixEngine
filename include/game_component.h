@@ -8,8 +8,18 @@
 #include <list>
 #include <typeinfo>
 
-class GameComponent {
+#define DEFINE_GET_TYPE(Class)		\
+const std::type_info&				\
+Class::getType() const {			\
+	return typeid(*this);			\
+}
 
+#define GET_TYPE_DEFINITION() \
+	virtual const std::type_info& getType() const
+
+class GameComponent {
+public:
+	GET_TYPE_DEFINITION() = 0;
 };
 
 #endif // !GAME_COMPONENT_H

@@ -62,7 +62,7 @@ Sprite::setBlendingMode(SDL_BlendMode mode) {
 	SDL_SetTextureBlendMode(this->texture, mode);
 }
 
-Size&
+const Size&
 Sprite::getSize() {
 	Size size;
 
@@ -70,3 +70,5 @@ Sprite::getSize() {
 		throw SDLException("Could not query texture");
 	return size;
 }
+
+DEFINE_GET_TYPE(Sprite)

@@ -17,7 +17,7 @@ public:
 	 * \param size The size of the surface to create.
 	 * \param alpha The alpha channel to set.
 	 */
-	FilledRect(const Color& color, const Size& size, int alpha, SDL_Renderer *renderer);
+	FilledRect(const Color& color, const Size& size, uint32_t alpha, SDL_Renderer *renderer);
 
 	/** Frees the resources.
 	 */
@@ -32,7 +32,7 @@ public:
 	 *
 	 * \return The size of the graphical resource.
 	 */
-	virtual Size& getSize();
+	virtual const Size& getSize();
 
 	/** Sets the modification color to the texture.
 	 * Alters a texture by setting a color to modify how it looks.
@@ -52,6 +52,8 @@ public:
 	 * \param blendMode The blending mode to set.
 	 */
 	void setBlendingMode(SDL_BlendMode blendMode);
+
+	GET_TYPE_DEFINITION();
 };
 
 #endif // FILLED_RECT_H

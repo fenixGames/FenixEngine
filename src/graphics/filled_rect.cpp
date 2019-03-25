@@ -4,13 +4,19 @@
 #include <exceptions.h>
 
 
-FilledRect::FilledRect(const Color& color, const Size& size, int alpha, SDL_Renderer *renderer)
+FilledRect::FilledRect(
+	const Color& color,
+	const Size& size, 
+	uint32_t alpha, 
+	SDL_Renderer *renderer)
 {
 	SDL_Surface * surface = SDL_CreateRGBSurface(0, size.width, size.height, 
-		32, color.red, color.green, color.blue, alpha);
+		32, 0, 0, 0, 0);
 	if (surface == NULL)
 		throw SDLException("Unable to create the RGB surface");
 
+	uint32_t intColor = color.getColorAsInt();
+	SDL_FillRect(surface, NULL, intColor);
 	this->texture = SDL_CreateTextureFromSurface(renderer, surface);
 	SDL_FreeSurface(surface);
 }
@@ -42,7 +48,7 @@ FilledRect::setBlendingMode(SDL_BlendMode mode) {
 	SDL_SetTextureBlendMode(this->texture, mode);
 }
 
-Size&
+const Size&
 FilledRect::getSize() {
 	Size size;
 
@@ -50,3 +56,5 @@ FilledRect::getSize() {
 		throw SDLException("Could not query texture");
 	return size;
 }
+
+DEFINE_GET_TYPE(FilledRect)
