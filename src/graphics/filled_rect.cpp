@@ -57,4 +57,3 @@ FilledRect::getSize() {
 	return size;
 }
 
-DEFINE_GET_TYPE(FilledRect)

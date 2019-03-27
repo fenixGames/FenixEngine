@@ -71,4 +71,3 @@ Sprite::getSize() {
 	return size;
 }
 
-DEFINE_GET_TYPE(Sprite)

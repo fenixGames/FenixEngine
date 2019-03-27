@@ -27,6 +27,8 @@ public:
 	 * \return The size of the graphical resource.
 	 */
 	virtual const Size& getSize() = 0;
+
+	GET_TYPE_DEFINITION();
 };
 
 /** Representation of a RGB color.

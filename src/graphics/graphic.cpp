@@ -23,3 +23,5 @@ Color::getColorAsInt() const {
 	color += this->blue;
 	return color;
 }
+
+DEFINE_GET_TYPE(Graphic)

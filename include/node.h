@@ -75,6 +75,10 @@ public:
 	template <class Type>
 	Type * getComponentOfType();
 
+	Graphic * getGraphicComponent();
+
+	Transform * getTransformComponent();
+
 	/** A virtual function to allow the node to perform actions on itself after printing.
 	 */
 	virtual void act() = 0;

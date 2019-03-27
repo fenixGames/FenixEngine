@@ -20,6 +20,6 @@ public:
 	void setText(std::string);
 	virtual SDL_Texture * getTexture();
 
-	GET_TYPE_DEFINITION();
+	
 };
 #endif

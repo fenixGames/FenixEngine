@@ -53,7 +53,6 @@ public:
 	 */
 	void setBlendingMode(SDL_BlendMode blendMode);
 
-	GET_TYPE_DEFINITION();
 };
 
 #endif // FILLED_RECT_H

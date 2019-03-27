@@ -30,4 +30,3 @@ SDL_Texture * Text::getTexture()
 	return texture;
 }
 
-DEFINE_GET_TYPE(Text)

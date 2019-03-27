@@ -11,7 +11,7 @@
 #define DEFINE_GET_TYPE(Class)		\
 const std::type_info&				\
 Class::getType() const {			\
-	return typeid(*this);			\
+	return typeid(Class *);			\
 }
 
 #define GET_TYPE_DEFINITION() \
